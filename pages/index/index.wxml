@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view>
+  <text>主页</text>
+</view>

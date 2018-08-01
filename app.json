@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#FFDD00",
+    "list": [
+      {
+        "pagePath":"pages/index/index",
+        "iconPath": "img/icon/tab_community_img_normal.png",
+        "selectedIconPath": "img/icon/tab_community_img_pressed.png",
+        "text": "广场"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/icon/tab_message_img_normal.png",
+        "selectedIconPath": "img/icon/tab_message_img_pressed.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/icon/tab_me_img_normal.png",
+        "selectedIconPath": "img/icon/tab_me_img_pressed.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
