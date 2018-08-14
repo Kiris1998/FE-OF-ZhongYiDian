@@ -1,0 +1,99 @@
+/* 作品名称及描述 */
+.work{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35vh;
+  background-color: #FFDD00;
+}
+.workname{
+  display: flex;
+  justify-content: center;    
+  width: 600rpx;
+  border: 5rpx solid #dfdcdc;
+}
+.workdescription{
+  display: flex;
+  justify-content: center;    
+  width: 600rpx;
+  border: 5rpx solid #dfdcdc;
+}
+
+/* 作品作者及内容 */
+.author{
+  height: 55vh;
+}
+.authordetail{
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #D0E5F0;
+}
+.authorimage{
+  width: 120rpx;
+  height: 120rpx;
+  padding: 40rpx;
+}
+.authorname{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.authortime{
+  color: #AAAD19;
+}
+
+/* 作品内容展示 */
+.page-section{
+  width: 100%;
+  height:43vh;
+}
+movable-area {
+  height: 400rpx;
+  width: 400rpx;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-image{
+  width:500rpx;
+  height:200rpx;
+}
+.page-selected-image{
+  width:500rpx;
+  height:200rpx;
+  z-index:999;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background: #1AAD19;
+  color: #fff;
+}
+
+/* 作品管理板块 */
+.manage{
+  height: 10vh;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: center;
+  font-size: 3vh;
+}
+.manageWork{
+  border: 1rpx solid #ccc;
+  padding:3vh;
+}
+.manageShare{
+  border: 1rpx solid #ccc;
+  padding:3vh;
+}
+.addPicture{
+  border: 1rpx solid #ccc;
+  padding:3vh;
+}

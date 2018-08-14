@@ -1,0 +1,29 @@
+ <view class='feeds'>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+  </view>
+  <view class='add' bindtap='addAWork'>
+    +
+  </view>

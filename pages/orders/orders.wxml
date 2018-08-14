@@ -1,0 +1,10 @@
+<view wx:for='{{array}}'>
+  <view class='ordersContainer' bindtap='toDetail'>
+    <view class='status'>
+      <text>{{status}}</text>
+    </view>
+    <view class='time'>
+      <text>{{time}}</text>
+    </view>
+  </view>
+</view>

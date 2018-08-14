@@ -1,0 +1,87 @@
+swiper{
+  width:100%;
+  height:30vh;
+}
+swiper image{
+  width:100%;
+  height:30vh;
+}
+.workthing{
+  width: 100%;
+  height: 8vh;
+  background-color: #B9D2F6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  font-size: 32rpx;
+}
+.workname{
+  color: #ffffff;
+}
+.workzan{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.comment{
+  height: 52vh;
+}
+.workcomment{
+  width: 100%;
+  height: 80rpx;
+  background-color: #D8E5F9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+}
+.workcommentpeople{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #D0E5F0;
+}
+.workcommentpeopleimg{
+  width: 120rpx;
+  height: 120rpx;
+  padding: 40rpx;
+}
+.workcommentpeopleavatar{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+.workcommentpeoplename{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+.workcommentpeoplething{
+  border: 1rpx solid #000000;
+  margin: 20rpx;
+}
+
+.sendcommit{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  font-size: 32rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.inputcommit{
+  border: 1rpx solid #D8E5F9;
+  padding: 32rpx;
+  width: 300rpx;
+}
+.sendshare{
+  border:1rpx solid #D8E5F9;
+  padding: 36rpx;
+  background-color: #B9D2F6;
+  font-size: 32rpx;
+}

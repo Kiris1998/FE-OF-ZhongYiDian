@@ -1,0 +1,49 @@
+<!-- 作品名称及描述 -->
+<view class='work'>
+  <view class='workname'>名称:斯嘉丽·约翰逊</view>
+  <view class='workdescription'>作品描述:这个作品真的是棒极了这个作品真的是棒极了这个作品真的是棒极了这个作品真的是棒极了这个作品真的是极了这个作品真的是棒极了
+  </view>
+</view>
+
+<!-- 作品作者及内容 -->
+<view class='author'>
+  <view class='authordetail'>
+    <image src='/img/avatar/1.png' class='authorimage'></image>
+    <view class='authorname'>
+      <view>张三</view>
+      <view class='authortime'>2018/8/5 13:00</view>
+    </view>
+  </view>
+  <!-- 作品内容展示 -->
+  <movable-area class="page-section">
+    <block wx:key="imageskey" wx:for="{{imageskey}}" wx:for-item="item">
+      <movable-view 
+        x="{{item.x}}" y="{{item.y}}" 
+        direction="all"
+        data-id='{{item.id}}'
+        bindtouchstart='ShowImage'
+        class="{{item.id===now_tab?'page-selected-image':'page-image'}}"
+        scale scale-min="0.5" scale-max="4"
+        out-of-bounds>
+        <image src='{{item.img}}' class="page-image"></image>
+      </movable-view>
+    </block>
+    
+    <!-- <movable-view 
+        x="{{item.x}}" y="{{item.y}}" 
+        direction="all"
+        data-id='{{item.id}}'
+        class="{{item.id==now_tab?'page-selected-image':'page-image'}}"
+        bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4"
+        out-of-bounds>
+        <image src='{{tempFilePaths}}' class="page-image"></image>
+      </movable-view> -->
+  </movable-area>
+</view>
+
+<!-- 作品管理板块 -->
+<view class='manage'>
+  <view class='manageWork'>管理</view>
+  <view class='manageShare'>分享</view>
+  <view class='addPicture' bindtap='addPicture'>添加照片</view>
+</view>

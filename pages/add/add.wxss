@@ -1,0 +1,35 @@
+.table{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.camera{
+  width: 230rpx;
+  height: 230rpx;
+  margin-top: 200rpx;
+}
+.photo{
+  width: 450rpx;
+  height: 600rpx;
+  margin-top: 100rpx;
+}
+image{
+   border: solid black 0.5px;
+   border-radius: 15%;
+   margin: 45rpx;
+}
+picker text{
+  padding-left: 25rpx;
+  font-size: 17px;
+  color: gray;
+}
+.inputText{
+  font-size: 17px;
+}
+input{
+  margin: 10rpx;
+}
+textarea{
+  margin: 10rpx;
+  height: 100rpx
+}

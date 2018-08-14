@@ -1,0 +1,44 @@
+<view class='two'>
+  <input placeholder='性别' placeholder-class='placeholder' bindinput='inputSex'></input>
+  <input placeholder='年龄' placeholder-class='placeholder' bindinput='inputAge'></input>
+</view>
+<input placeholder='时间' placeholder-class='placeholder' bindinput='inputTime'></input>
+<textarea 
+  placeholder='拍摄内容：（即作品的分类，产品照，活动记录，人像，风光，人文）'
+  placeholder-class='placeholder'
+  bindinput='inputDetail'
+  >
+</textarea>
+<textarea 
+  placeholder='拍摄地点：（如果是特殊场地是否需要摄影师帮助申请）'
+  placeholder-class='placeholder'
+  bindinput='inputAdd'
+  >
+</textarea>
+<textarea 
+  placeholder='拍摄思路：如分镜，意境，剧情'
+  placeholder-class='placeholder'
+  bindinput='inputMethods'
+  >
+</textarea>
+<textarea 
+  placeholder='迟到协议'
+  placeholder-class='placeholder'
+  bindinput='inputProt'
+  >
+</textarea>
+<textarea 
+  placeholder='作品数量要求，后期处理需求'
+  placeholder-class='placeholder'
+  bindinput='inputNeeds'
+  >
+</textarea>
+<label for='dinner'>
+    <text>如果拍摄时间过长是否解决用餐</text>
+    <radio id='dinner' value='用餐'></radio>
+</label>
+<label for='money'>
+    <text>拍摄定金交付与否</text>
+    <radio id='money' value='定金'></radio>
+</label>
+<button bindtap='add'>发布订单</button>

@@ -1,0 +1,8 @@
+camera{
+  width: 100%;
+  height: 400px;
+}
+image{
+  width: 100%;
+  height: 400px;
+}

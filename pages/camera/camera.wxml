@@ -1,0 +1,5 @@
+<camera device-position="back"></camera>
+<button class='btn-yellow' bindtap='takePhoto'>拍照</button>
+请确认图片：
+<image wx-if="{{src}}" src='{{src}}'></image>
+<button class='btn-yellow' bindtap='finish'>确定</button>

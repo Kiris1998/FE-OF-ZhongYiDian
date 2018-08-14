@@ -1,4 +1,52 @@
-<!--index.wxml-->
 <view>
-  <text>主页</text>
+  <view class='fixedBox'>
+    <swiper indicator-dots='true' autoplay='true' circular='true'>
+      <block wx:for="{{images}}" wx:key="{{item}}">
+        <swiper-item>
+          <image mode='aspectFit' src="{{item.image_url}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <scroll-view scroll-x="true">
+      <ul>
+          <li wx:for="{{sorts}}" wx:key="{{item}}">{{item}}</li>
+        </ul>
+    </scroll-view>
+  </view>
+  
+  <view class='feeds-double'>
+    <view class='row'>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+    </view>
+    <view class='row'>
+      <view class='card'>
+        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      </view>
+    </view>
+  </view>
+  
+  
 </view>

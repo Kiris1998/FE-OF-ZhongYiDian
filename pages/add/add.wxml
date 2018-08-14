@@ -1,0 +1,18 @@
+<view class='table'>
+  <image class='photo' wx:if="{{imgSrc}}" src='{{imgSrc}}' bindtap='goToCamera'></image>
+  <image class='camera' wx:else src='../../images/logo/camera.png' bindtap='goToCamera'></image>
+  <view class='information'>
+    <picker range='{{type}}' value='{{index}}' bindchange='selectType'>
+      <text>请选择书本类别：</text>{{type[index]}}
+    </picker>
+    <input class='textInput' 
+           placeholder-class='inputText' 
+           placeholder='请输入作品名'
+           bindinput='name'></input>
+    <textarea class='textInput' 
+           placeholder='请输入书籍描述（25字以内）' 
+           placeholder-class='inputText' 
+           bindinput='description'></textarea>
+  </view>
+  <button class='btn-yellow' bindtap='addWork'>发布</button>
+</view>

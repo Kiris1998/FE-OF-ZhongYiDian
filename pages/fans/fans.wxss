@@ -1,0 +1,36 @@
+.fansContainer{
+  width: 100%;
+  height: 80px;
+  background-color: #E4E4E4;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 1px;
+}
+
+.userIcon{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.userNickname{
+  width: 120px;
+  height: 20px;
+  background-color: #F2F2F2;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.starView{
+  width: 75px;
+  height: 25px;
+  background-color: #F2F2F2;
+  border-radius: 10%;
+  text-align: center;
+  margin-left: 40px;
+  align-self: center;
+}

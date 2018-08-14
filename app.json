@@ -1,11 +1,24 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/add/add",
+    "pages/camera/camera",
+    "pages/detail/detail",
+    "pages/discover/discover",
+    "pages/index_user_self/index_user_self",
+    "pages/index_user_other/index_user_other",
+    "pages/index_designer_self/index_designer_self",
+    "pages/index_designer_other/index_designer_other",
+    "pages/fans/fans",
+    "pages/orders/orders",
+    "pages/stars/stars",
+    "pages/workpage/workpage",
+    "pages/workdetali/workdetali"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "众一点",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -18,13 +31,13 @@
         "text": "广场"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/discover/discover",
         "iconPath": "img/icon/tab_message_img_normal.png",
         "selectedIconPath": "img/icon/tab_message_img_pressed.png",
         "text": "发现"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index_user_self/index_user_self",
         "iconPath": "img/icon/tab_me_img_normal.png",
         "selectedIconPath": "img/icon/tab_me_img_pressed.png",
         "text": "我的"

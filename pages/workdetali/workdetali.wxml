@@ -1,0 +1,41 @@
+<!-- 轮播图 -->
+<swiper indicator-dots='true' autoplay="true" interval="3000">
+  
+        <swiper-item><image src="/img/1.jpg"></image></swiper-item>
+        <swiper-item><image src="/img/2.jpg"></image></swiper-item>
+        <swiper-item><image src="/img/3.jpg"></image></swiper-item>
+</swiper>
+
+<!-- 作品点赞详情 -->
+<view class='workthing'>
+  <view class='workname'>作者:娜塔莎</view>
+  <view class='workzan'>
+    <view>13</view>
+    <image src='/img/zan.png' style='width: 50rpx;height: 50rpx;margin-bottom:10rpx;'></image>
+  </view>
+</view>
+
+<!-- 作品评论详情 -->
+<scroll-view scroll-y class='comment'>
+  <view class='workcomment'>评论:17</view>
+  <block wx:for="{{comments_key}}" wx:for-item="item"> 
+    <view class='workcommentpeople'>
+      <image src='{{item.avatarimg}}' class='workcommentpeopleimg'></image>
+      <view class='workcommentpeopleavatar'>
+        <view class='workcommentpeoplename'>
+          <view>{{item.avatarname}}</view>
+          <view>{{item.avatartime}}</view>
+        </view>
+        <view class='workcommentpeoplething'>{{item.avatardescription}}</view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+<view class='sendcommit'>
+  <view>发送评论</view>
+  <view class="inputcommit">
+    <input bindinput="bindReplaceInput" confirm-type='发送' placeholder="连续的两个1会变成2" />
+  </view>
+  <view class="sendshare">分享</view>
+</view>

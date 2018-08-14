@@ -1,0 +1,21 @@
+.two{
+  display: flex;
+  justify-content: space-between
+}
+page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+radio-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+label{
+  display: flex;
+  width: 100%;
+  justify-content: space-between
+}

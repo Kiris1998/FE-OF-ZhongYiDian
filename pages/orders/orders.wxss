@@ -1,0 +1,32 @@
+.ordersContainer{
+  margin-top: 2px;
+  height: 80px;
+  width: 100%;
+  background-color: #E4E4E4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.status{
+  height: 40px;
+  width: 50px;
+  margin-left: 15px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time{
+  height: 40PX;
+  width: 240px;
+  background-color: #f2f2f2;
+  margin-left: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

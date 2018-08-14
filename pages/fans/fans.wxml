@@ -1,0 +1,7 @@
+<view wx:for='{{array}}'>
+  <view class='fansContainer'>
+    <image class='userIcon' src='{{userInfo.avatarUrl}}' mode='cover'></image>
+    <view class='userNickname'>{{nickName}}</view>
+    <view class='starView' bindtap='starIt'>{{flag?'关注':'已关注'}}</view>
+  </view>
+</view>
