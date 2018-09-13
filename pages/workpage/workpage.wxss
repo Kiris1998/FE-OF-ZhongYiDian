@@ -6,19 +6,25 @@
   justify-content: center;
   width: 100%;
   height: 35vh;
-  background-color: #FFDD00;
 }
 .workname{
   display: flex;
+  font-size:36rpx;
+  color: #ffffff;
   justify-content: center;    
   width: 600rpx;
-  border: 5rpx solid #dfdcdc;
+  margin-bottom: 50rpx;
+  border: 1rpx solid #dfdcdc;
 }
 .workdescription{
   display: flex;
   justify-content: center;    
-  width: 600rpx;
-  border: 5rpx solid #dfdcdc;
+  width: 400rpx;
+  height: 200rpx;
+  color: #ffffff;
+  font-size:28rpx;
+  padding:0 100rpx;
+  border: 1rpx solid #dfdcdc;
 }
 
 /* 作品作者及内容 */
@@ -31,31 +37,32 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #D0E5F0;
+  background-color: #FFFEF9;
 }
 .authorimage{
-  width: 120rpx;
-  height: 120rpx;
-  padding: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  padding: 30rpx;
 }
 .authorname{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  font-size:32rpx;
 }
 .authortime{
-  color: #AAAD19;
+  color: #B1B1B1;
 }
 
 /* 作品内容展示 */
 .page-section{
   width: 100%;
-  height:43vh;
+  height:35vh;
 }
 movable-area {
   height: 400rpx;
   width: 400rpx;
-  background-color: #ccc;
+  background-color: #E1E1E1;
   overflow: hidden;
 }
 .page-section:last-child{
@@ -85,15 +92,36 @@ movable-area {
   align-items: center;
   font-size: 3vh;
 }
-.manageWork{
+/* .manageWork{
   border: 1rpx solid #ccc;
   padding:3vh;
 }
 .manageShare{
   border: 1rpx solid #ccc;
   padding:3vh;
-}
+} */
 .addPicture{
   border: 1rpx solid #ccc;
-  padding:3vh;
+  background-color: #FFFEF9;
+  color:#0066ff;
+  padding: 3vh 300rpx;
+  width:300rpx;
+}
+
+/* 讨论内容评论展示 */
+.comment{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80rpx;
+  border-bottom: 1rpx solid #D8E5F9;
+}
+text{
+  padding:20rpx;
+}
+.commentIt{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

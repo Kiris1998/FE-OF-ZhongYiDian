@@ -3,23 +3,27 @@
 const app = getApp()
 Page({
   data: {
-    fans_number:7,
-    stars_number:15,
+    fans_number:0,
+    stars_number:0,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    identity:'普通会员',
+    identity:'User',
     star:'关注',
     select:0,
     ischecked:0,
-    imgUrl:null,
-    img_hight: ''
-    
+    img_hight: '',
+    role:'',
+    name:'',
+    followed:null,
+    followers:null
   },
   onLoad: function () {
+    var that = this;
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
+        name:app.globalData.userInfo.nickName,
         hasUserInfo: true
       })
     } else if (this.data.canIUse) {
@@ -28,6 +32,7 @@ Page({
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
+          name: res.userInfo.nickName,
           hasUserInfo: true
         })
       }
@@ -38,18 +43,76 @@ Page({
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
+            name: res.userInfo.nickName,
             hasUserInfo: true
           })
         }
       })
     }
-    //处理图片自适应
-    let that = this;
-    wx.getImageInfo({
-      src: '../../img/1.jpg',
+    //获取用户信息
+    wx.request({
+      url: "https://design.zhengsj.top/api/user/" + app.globalData.uid,
+      method: "GET",
+      data: {
+        uid: app.globalData.uid
+      },
+      header:{
+        'content-type': 'application/json', // 默认值
+        'Authorization':app.globalData.token
+      },
+      success: function (res) {
+        //console.log(res.data.data.role=='User')
+        //console.log('submit success')
+        //console.log(res.data)
+        that.setData({
+          role:res.data.data.role,
+          followed:res.data.data.followed,
+          followers:res.data.data.followers,
+        })
+        if(res.data.data.avatarUrl){
+          that.setData({
+            imgUrl:res.data.data.avatarUrl
+          })
+        }
+        if (res.data.data.name){
+          that.setData({
+            name:res.data.data.name
+          })
+        }
+      },
+      fail: function () {
+        console.log('submit fail')
+      }
+    })
+    //获取用户粉丝列表
+    wx.request({
+      url: "https://design.zhengsj.top/api/user/followers/list",
+      method:"GET",
+      header:{
+        'Authorization': app.globalData.token
+      },
+      data:{
+        
+      },
+      success:function(res){
+        that.setData({
+          fans_number: res.data.follower_count
+        })
+      }
+    })
+    //获取用户关注列表
+    wx.request({
+      url: "https://design.zhengsj.top/api/user/followed/list",
+      method: "GET",
+      header: {
+        'Authorization': app.globalData.token
+      },
+      data: {
+
+      },
       success: function (res) {
         that.setData({
-          img_hight: 660 / res.width * res.height + 'rpx'
+          stars_number: res.data.followed_count
         })
       }
     })
@@ -101,6 +164,13 @@ Page({
       ischecked:1
     })
   },
+  toPrice: function () {
+    var that = this;
+    that.setData({
+      select: 2,
+      ischecked: 2
+    })
+  },
   setPhoteInfo:function(){
     var that = this;
     wx.chooseImage({
@@ -110,7 +180,32 @@ Page({
         that.setData({
           imgUrl:tempFilePaths
         })
+        wx.uploadFile({
+          url: "https://design.zhengsj.top/api/user/avatar",
+          filePath: tempFilePaths[0],
+          name: 'avatarUrl',
+          header:{
+            'Authorization': app.globalData.token
+          },
+          formData:{
+            avatarUrl:tempFilePaths[0]
+          },
+          success: function (res) {
+            console.log(res.data)
+            console.log('submit success')
+          }
+        })
       },
+      fail:function(res){
+        console.log(Error)
+      }
+    })
+  },
+  changeNickName:function(){
+    wx.request({
+      url: 'https://design.zhengsj.top/api/user',
+      method:'POST',
+      
     })
   }
 })

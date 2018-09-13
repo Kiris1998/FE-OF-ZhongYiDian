@@ -1,0 +1,17 @@
+<template name="feedsCard">
+  <view class='feedsCard'>
+    <view class='info'>
+      <image class='head' src='../../img/feedsIcon/head.jpg'></image>
+      <view class='textInfo'>
+        <text>Kiris</text>
+        <text>2018.12.31</text>
+      </view>
+    </view>
+      <image class='card-img' mode='widthFix' src='../../img/1.jpg'></image>
+    <view class='btns'>
+      <image src="{{isLove == true ? '../../img/feedsIcon/love.png' : '../../img/feedsIcon/loved.png'}}" bindtap='changeLove'></image>
+      <image src='../../img/feedsIcon/mes.png'></image>
+      <image src='../../img/feedsIcon/share.png'></image>
+    </view>
+  </view>
+</template>

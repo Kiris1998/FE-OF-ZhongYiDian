@@ -58,7 +58,7 @@ Page({
           success: function (res) {
            
             wx.uploadFile({
-              url: 'https://oss–cn–beijing.aliyuncs.com', //仅为示例，非真实的接口地址
+              // url: 'https://oss–cn–beijing.aliyuncs.com', //仅为示例，非真实的接口地址
               filePath: tempFilePaths[0],
               name: 'file',
               formData: {

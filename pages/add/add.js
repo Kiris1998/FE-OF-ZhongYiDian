@@ -12,28 +12,6 @@ Page({
     name:'',
     description:''
   },
-  onShow:function(){
-    this.setData({
-      imgSrc: app.globalData.imgSrc
-    })
-    // app.globalData.imgSrc = '';
-    // if(!app.globalData.hasWeChat)
-    // {
-    //   wx.showModal({
-    //     title: '温馨提示',
-    //     content: '请在信息页面初始化个人信息',
-    //     showCancel: false,
-    //     confirmText: '前往设置',
-    //     success: function (res) {
-    //       if (res.confirm) {
-    //         wx.navigateTo({
-    //           url: '../information/information',
-    //         })
-    //       }
-    //     }
-    //   })
-    // }
-  },
   onUnload:function(){
     this.setData({
       imgSrc:''
@@ -44,9 +22,17 @@ Page({
       index:parseInt(e.detail.value)
     })
   },
-  goToCamera:function(){
-    wx.navigateTo({
-      url: '../camera/camera',
+  chooseImg:function(){
+    let that = this
+    wx.chooseImage({
+      count:1,
+      sourceType:['album'],
+      success: function(res) {
+        app.globalData.imgSrc = res.tempFilePaths
+        that.setData({
+          imgSrc: app.globalData.imgSrc
+        })
+      },
     })
   },
   name:function(e){

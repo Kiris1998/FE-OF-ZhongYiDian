@@ -1,18 +1,29 @@
 <view class='table'>
-  <image class='photo' wx:if="{{imgSrc}}" src='{{imgSrc}}' bindtap='goToCamera'></image>
-  <image class='camera' wx:else src='../../images/logo/camera.png' bindtap='goToCamera'></image>
+  <image class='photo' wx:if="{{imgSrc}}" src='{{imgSrc}}' bindtap='chooseImg'></image>
+  <image class='camera' mode='widthFix' wx:else src='../../img/camera.png' bindtap='chooseImg'></image>
   <view class='information'>
     <picker range='{{type}}' value='{{index}}' bindchange='selectType'>
-      <text>请选择书本类别：</text>{{type[index]}}
+      <text>#添加标签</text>
     </picker>
-    <input class='textInput' 
-           placeholder-class='inputText' 
-           placeholder='请输入作品名'
-           bindinput='name'></input>
-    <textarea class='textInput' 
-           placeholder='请输入书籍描述（25字以内）' 
-           placeholder-class='inputText' 
-           bindinput='description'></textarea>
+    <view class='chooseType'>
+      <view>
+        <i class='icon iconfont icon-huihuaban'></i>
+        <text> 风格</text>
+      </view>
+      <text>你是什么类型的？</text>
+    </view>
+    <view class='items'>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+      <text class='chooseItem'>颜值</text>
+    </view>
+    
   </view>
-  <button class='btn-yellow' bindtap='addWork'>发布</button>
+  <text class='add' bindtap='addWork'>发布</text>
 </view>

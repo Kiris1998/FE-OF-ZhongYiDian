@@ -1,14 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/index_user_self/index_user_self",
+    "pages/topic/topic",
+    
     "pages/add/add",
-    "pages/camera/camera",
+    "pages/index/index",
     "pages/detail/detail",
     "pages/discover/discover",
-    "pages/index_user_self/index_user_self",
-    "pages/index_user_other/index_user_other",
-    "pages/index_designer_self/index_designer_self",
-    "pages/index_designer_other/index_designer_other",
     "pages/fans/fans",
     "pages/orders/orders",
     "pages/stars/stars",
@@ -17,31 +15,32 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FFFEF9",
     "navigationBarTitleText": "众一点",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "selectedColor": "#FFDD00",
+    "selectedColor": "#707070",
     "list": [
       {
         "pagePath":"pages/index/index",
-        "iconPath": "img/icon/tab_community_img_normal.png",
-        "selectedIconPath": "img/icon/tab_community_img_pressed.png",
+        "iconPath": "img/icon/index2.png",
+        "selectedIconPath": "img/icon/index.png",
         "text": "广场"
       },
       {
         "pagePath": "pages/discover/discover",
-        "iconPath": "img/icon/tab_message_img_normal.png",
-        "selectedIconPath": "img/icon/tab_message_img_pressed.png",
+        "iconPath": "img/icon/search2.png",
+        "selectedIconPath": "img/icon/search.png",
         "text": "发现"
       },
       {
         "pagePath": "pages/index_user_self/index_user_self",
-        "iconPath": "img/icon/tab_me_img_normal.png",
-        "selectedIconPath": "img/icon/tab_me_img_pressed.png",
+        "iconPath": "img/icon/me2.png",
+        "selectedIconPath": "img/icon/me.png",
         "text": "我的"
       }
-    ]
+    ],
+    "backgroundColor": "#FFFEF9"
   }
 }

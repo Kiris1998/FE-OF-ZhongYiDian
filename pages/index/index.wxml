@@ -1,52 +1,47 @@
+<import src="../feeds/feeds.wxml"/>
 <view>
   <view class='fixedBox'>
-    <swiper indicator-dots='true' autoplay='true' circular='true'>
+    <swiper autoplay='true' circular='true'>
       <block wx:for="{{images}}" wx:key="{{item}}">
         <swiper-item>
           <image mode='aspectFit' src="{{item.image_url}}"></image>
         </swiper-item>
       </block>
     </swiper>
-    <scroll-view scroll-x="true">
-      <ul>
-          <li wx:for="{{sorts}}" wx:key="{{item}}">{{item}}</li>
-        </ul>
-    </scroll-view>
+    <view class='hideBox'>
+      <view class='scroll-view'>
+        <text id="{{index}}"
+          style="color:{{nowId==index?'black':'#707070'}}"
+          wx:for="{{sorts}}"
+          wx:for-index="index" 
+          wx:for-item="item" 
+          wx:key="{{index}}" 
+          bindtap='changeType'>{{item}}</text>
+      </view>
+    </view>
   </view>
-  
   <view class='feeds-double'>
-    <view class='row'>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+    <view class='box'>
+      <view class='row'>
+        <view class='feeds'>
+          <template is="feedsCard"/>
+        </view>
+        <view class='feeds'>
+          <template is="feedsCard"/>
+        </view>
+        <view class='feeds'>
+          <template is="feedsCard"/>
+        </view>
+        <view class='feeds'>
+          <template is="feedsCard"/>
+        </view>
       </view>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      <view class='row'>
+        <view class='feeds'>
+          <template is="feedsCard"/>
+        </view>
       </view>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-      </view>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-      </view>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-      </view>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-      </view>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-      </view>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-      </view>
-    </view>
-    <view class='row'>
-      <view class='card'>
-        <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-      </view>
-    </view>
   </view>
-  
-  
+    
+  </view>
 </view>

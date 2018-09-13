@@ -1,0 +1,24 @@
+<!-- 讨论作者及内容 -->
+<view class='author'>
+  <view class='authordetail'>
+    <image src='{{imgUrl}}' class='authorimage'></image>
+    <view class='authorname'>
+      <view>Curtin</view>
+      <view class='authortime'>2018-8-5 13:00</view>
+    </view>
+  </view>
+  <!-- 讨论内容展示 -->
+  <view class="page-section">   
+  </view>
+  <!-- 讨论内容评论展示 -->
+  <view class="comment">
+    <view class="commentIt">
+      <image src="../../img/feedsIcon/love.png" style='width:40rpx;height:40rpx;padding:20rpx;'></image>
+      <text>2</text>
+    </view>
+    <view class="commentIt">
+      <image src="../../img/feedsIcon/mes.png" style='width:40rpx;height:40rpx;padding:20rpx;'></image>
+      <text>0</text>
+    </view>
+  </view>
+</view>

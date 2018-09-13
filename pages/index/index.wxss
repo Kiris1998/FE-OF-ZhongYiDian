@@ -1,3 +1,4 @@
+@import "../feeds/feeds.wxss";
 .fixedBox{
  position: fixed;
  top: 0;
@@ -6,23 +7,67 @@
  background: white;
  direction: column
 }
- swiper-item image{
+.btns image{
+  width: 20px;
+  height: 20px;
+  margin: 3px 6px;
+}
+.feedsCard{
+  box-shadow: none;
+  padding: 0px;
+}
+.btns{
+  margin-left: 10px;
+}
+.head{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+.textInfo text:nth-child(1){
+  font-size: 15px;
+}
+.textInfo text:nth-child(2){
+  font-size: 10px;
+}
+swiper-item image{
   width: 100%;
   height: 340rpx;
-} 
+}
+.hideBox{
+  overflow: hidden;
+  height: 30px;
+}
+.scroll-view{
+  height: 50px;
+  overflow-x: scroll;
+  white-space: nowrap
+}
+.scroll-view text{ 
+  /* color: #9f9f9f; */
+  color: #9f9f9f;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 2px 20px;
+  font-size: 15px;
+}
 
 .feeds-double{
-  margin-top: 350rpx;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 370rpx;
   padding: 10rpx;
+  background:#F5F5F5;
+  display: flex;
+  justify-content: center;
 }
-
 .row{
-  background: yellow;
-  border: solid 1px black;
-  padding: 7px;
+  padding: 1px;
 }
 .card-img{
-  width: 330rpx;
+  width: 320rpx;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+  width: 680rpx;
 }

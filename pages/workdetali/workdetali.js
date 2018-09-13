@@ -37,7 +37,7 @@ Page({
   onLoad: function (res) {    
     var self = this
     wx.request({
-      url: 'http://123.207.160.62/comment/comment_list',
+      // url: 'http://123.207.160.62/comment/comment_list',
       method: 'GET',
       header: {
         'content-type': 'application/json' // 默认值
@@ -52,7 +52,7 @@ Page({
   },
   bindReplaceInput:function(){
     wx.request({
-      url: 'http://123.207.160.62/comment/comment_upload',
+      // url: 'http://123.207.160.62/comment/comment_upload',
       method: 'POST',
       header: {
         'content-type': 'application/json' // 默认值

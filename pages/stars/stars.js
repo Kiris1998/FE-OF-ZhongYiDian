@@ -6,15 +6,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flag: false,
-    array: [1],
-    nickName: '昵称'
+    flag: true,
+    array: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    var that = this
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -41,6 +41,20 @@ Page({
         }
       })
     }
+    wx.request({
+      url: "https://design.zhengsj.top/api/user/followed/list",
+      data: {},
+      header: { 'Authorization': app.globalData.token },
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          array: res.data.data,
+        })
+      },
+      fail: function () {
+        console.log('fail')
+      }
+    })
   },
 
   /**
@@ -95,6 +109,16 @@ Page({
     var that = this;
     that.setData({
       flag: !that.data.flag
+    })
+    wx.request({
+      url: "https://design.zhengsj.top/api/user/relationship/" + app.globalData.uid,
+      data: {
+        uid: app.globalData.uid
+      },
+      header: { 'Authorization': app.globalData.token },
+      success: function (res) {
+        console.log(res.data)
+      }
     })
   }
 })

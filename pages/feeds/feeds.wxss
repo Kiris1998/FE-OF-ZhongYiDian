@@ -1,0 +1,46 @@
+/* page{
+  background: #FFFEF9
+} */
+.head{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.info{
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.info image:nth-child(1){
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.textInfo{
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+}
+.textInfo text:nth-child(1){
+  font-size: 13px;
+}
+.textInfo text:nth-child(2){
+  color: #CCC;
+  font-size: 10px;
+}
+.btns{
+  margin-left: 20px;
+}
+.btns image{
+  width: 30px;
+  height: 30px;
+  margin: 5px 10px;
+}
+.feedsCard{
+  border-bottom: solid 1px #C5C5C5;
+  padding: 0;
+  background: white
+}
+.imgBox{
+  display: flex;
+  justify-content: center;
+}

@@ -1,9 +1,8 @@
 <!-- 轮播图 -->
 <swiper indicator-dots='true' autoplay="true" interval="3000">
-  
-        <swiper-item><image src="/img/1.jpg"></image></swiper-item>
-        <swiper-item><image src="/img/2.jpg"></image></swiper-item>
-        <swiper-item><image src="/img/3.jpg"></image></swiper-item>
+  <swiper-item><image src="/img/1.jpg"></image></swiper-item>
+  <swiper-item><image src="/img/2.jpg"></image></swiper-item>
+  <swiper-item><image src="/img/3.jpg"></image></swiper-item>
 </swiper>
 
 <!-- 作品点赞详情 -->

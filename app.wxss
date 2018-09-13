@@ -6,8 +6,6 @@
   margin-top: 15rpx;
   display: flex;
   padding: 10rpx;
-  background: yellow;
-  border: solid 1px black;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +29,7 @@
   flex-direction: column;
   height: 170px;
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #FFFEF9;
 }
 
 .content{
@@ -44,6 +42,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 20rpx;
 }
 
 .showNumber{
@@ -72,16 +71,18 @@
 
 .square1{
   width: 80rpx;
-  background-color: #777777;
+  background-color: #FFFEF9;
   margin: 0 10rpx;
   text-align: center;
+  font-size: 15px;
 }
 
 .square2{
   width: 80rpx;
-  background-color: #c0c0c0;
+  background-color: #FFFEF9;
   margin: 0 10rpx;
   text-align: center;
+  font-size: 15px;
 }
 
 .userinfo-avatar {
@@ -100,24 +101,44 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: 100rpx;
+  margin-top: 50rpx;
+}
+
+.designerLabel{
+  height: 25px;
+  width: 185px;
+  background-color: #cccccc;
+  text-align: center;
+  align-self: center;
 }
 
 
 .identity{
-  margin-left: 230rpx;
+  margin-left: 340rpx;
+}
+
+.identity_designer{
+  margin-left: 340rpx;
 }
 
 .ischecked{
-  margin: 0 20rpx;
+  margin: 0 30rpx;
   color: red;
   text-decoration-line: underline;
 }
 
 .normal{
-  margin: 0 20rpx;
+  margin: 0 30rpx;
 }
 
 .click{
   color: red;
+}
+
+.button_hover{
+  background-color: #FFFEF9;
+  color: #0097FE;
+  border-style: solid;
+  border-width: 1rpx;
+  border-color: #0097FE;
 }

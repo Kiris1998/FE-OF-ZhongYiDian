@@ -1,15 +1,15 @@
-
-
+@import "../feeds/feeds.wxss";
+page{
+  background: #F5F5F5
+}
+.img_card{
+  width: 660rpx;
+}
 .add{
-  display: flex;
   position: fixed;
   right: 10px;
   bottom: 10px;
   width: 50px;
   height: 50px;
-  background: red;
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  
 }

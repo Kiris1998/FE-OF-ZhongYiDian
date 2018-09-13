@@ -1,10 +1,11 @@
 <!--index.wxml-->
 <!--普通用户查看自己界面-->
+<import src="../feeds/feeds.wxml"/>
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else> 
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname" bindtap='changeNickName'>{{name}}</text>
       <view class='container2'>
         <view class='showNumber'>
           <view class='rectangle1'>
@@ -20,43 +21,33 @@
           <image wx:if="{{imgUrl!=null}}" class="userinfo-avatar" src="{{imgUrl}}" background-size="cover"></image>
         <image wx:else class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
         </view>
-       <button bindtap='toOrder'>订单</button>
+       <button bindtap='toOrder' class='button_hover'>订单</button>
       </view>
-      <view class='container3'>
+      <block wx:if="{{role=='designer'}}"><view class='designerLabel'>设计师标签</view></block>
+      <view class="{{role=='User'?'container3':'container3_designer'}}">
         <view class="{{(ischecked==0)?'ischecked':'normal'}}" bindtap='toGallery'>相册</view>
         <view class="{{(ischecked==1)?'ischecked':'normal'}}"  bindtap='toProduction'>作品集</view>
-        <view class='identity'>{{identity}}</view>
+        <!--<block wx:if="{{role=='designer'}}"><view class="{{(ischecked==2)?'ischecked':'normal'}}"  bindtap='toPrice'>接单</view></block> 接单-->
+        <view class="{{role=='User'?'identity':'identity_designer'}}">{{role=='User'?'普通会员':'设计师'}}</view>
       </view>
     </block>
   </view>
   <view class='content'>
     <block wx:if="{{select==0}}">
-       <view class='feeds'>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+      <view class='feeds-double'>
+        <view class='box'>
+          <view class='row'>
+            <view class='feeds'>
+              <template is="feedsCard"/>
+            </view>
           </view>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-          </view>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-          </view>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-          </view>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-          </view>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-          </view>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
-          </view>
-          <view class='card'>
-            <image mode='aspectFit' class='card-img' src='../../img/1.jpg' style='height:{{img_hight}}'></image>
+          <view class='row'>
+            <view class='feeds'>
+              <template is="feedsCard"/>
+            </view>
           </view>
         </view>
+      </view>
     </block>
     <block wx:if="{{select==1}}">
       <view class='showProduction'>This is production</view>

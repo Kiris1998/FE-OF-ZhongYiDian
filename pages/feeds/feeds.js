@@ -1,33 +1,16 @@
-var app = getApp();
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    array:[],
-    status:'订单状态',
-    time:'订单创建时间'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    wx.request({
-      url: 'https://design.zhengsj.top/api/order/list',
-      method:'GET',
-      data: {},
-      header: { 'Authorization': app.globalData.token },
-      success: function (res) {
-        console.log(res.data)
-        that.setData({
-          array: res.data.data
-        })
-     }
-    })
+    
   },
 
   /**
@@ -77,8 +60,5 @@ Page({
    */
   onShareAppMessage: function () {
     
-  },
-  toDetail:function(){
-    console.log('detail')
   }
 })
