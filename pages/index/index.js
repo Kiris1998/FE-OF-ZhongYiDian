@@ -19,29 +19,19 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'https://cavy.helloyzy.cn/api/categories/',
+      url: 'https://design.zhengsj.top/api/picture_manage/carousel_list',
       method: "GET",
       success: function (res) {
-        that.setData({
-          images: res.data.data.categories
-        })
+        console.log(res)
       }
     });
-    // wx.request({
-    //   url: 'https://design.zhengsj.top/api/find/square/1',
-    //   method: "GET",
-    //   success: function (res) {
-    //     console.log(res)
-    //   }
-    // });
-    wx.getImageInfo({
-      src: '../../img/1.jpg',
-      success:function(res){
-        that.setData({
-          img_hight:330/res.width*res.height+'rpx'
-        })
+    wx.request({
+      url: 'https://design.zhengsj.top/api/find/square/<0>',
+      method: "GET",
+      success: function (res) {
+        console.log(res)
       }
-    })
+    });
   },
   changeType:function(e){
     this.setData({
