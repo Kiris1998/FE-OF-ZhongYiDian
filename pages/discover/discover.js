@@ -1,12 +1,28 @@
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isLove:true
+    data:{
+      isLove: true,
+      isDiscover:true
+    }
+    
   },
-
+  onLoad:function(){
+    wx.request({
+      url: 'https://design.zhengsj.top/api/find/square/1',
+      method:'GET',
+      header:{
+        'Authorization': app.globalData.token
+      },
+      success:function(res){
+        console.log(res)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -17,7 +33,7 @@ Page({
   },
   changeLove:function(){
     this.setData({
-      isLove:!this.data.isLove
+      isLove:!this.data.data.isLove
     })
   }
 })

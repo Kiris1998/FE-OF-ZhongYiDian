@@ -3,7 +3,7 @@
   text-align: center;
 }
 .feeds{
-  margin-top: 15rpx;
+  margin-top: 2rpx;
   display: flex;
   padding: 10rpx;
   flex-direction: column;

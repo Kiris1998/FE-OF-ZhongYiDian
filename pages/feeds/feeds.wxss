@@ -8,24 +8,18 @@
 }
 .info{
   display: flex;
-  margin-left: 20px;
-  margin-bottom: 5px;
 }
 .info image:nth-child(1){
-  margin-top: 5px;
-  margin-right: 10px;
+  margin: 5px;
 }
 .textInfo{
   display: flex;
   flex-direction: column;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 .textInfo text:nth-child(1){
   font-size: 13px;
-}
-.textInfo text:nth-child(2){
-  color: #CCC;
-  font-size: 10px;
+  color: #9F9F9F;
 }
 .btns{
   margin-left: 20px;
@@ -36,11 +30,14 @@
   margin: 5px 10px;
 }
 .feedsCard{
-  border-bottom: solid 1px #C5C5C5;
   padding: 0;
-  background: white
+  background: white;
+  margin-bottom: 4px;
 }
 .imgBox{
   display: flex;
   justify-content: center;
+}
+.infoBc{
+  background: #F5F5F5
 }

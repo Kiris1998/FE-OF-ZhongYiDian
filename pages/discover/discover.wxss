@@ -2,8 +2,8 @@
 page{
   background: #F5F5F5
 }
-.img_card{
-  width: 660rpx;
+.card-img{
+  width: 730rpx;
 }
 .add{
   position: fixed;
@@ -12,4 +12,16 @@ page{
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.textInfo text:nth-child(1){
+  font-size: 17px;
+  margin-top: 4px;
+}
+.btns{
+  margin-left: 5px;
+}
+.btns image{
+  width: 25px;
+  height: 25px;
+  margin: 5px;
 }

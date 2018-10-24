@@ -26,15 +26,6 @@
         <view class='feeds'>
           <template is="feedsCard"/>
         </view>
-        <view class='feeds'>
-          <template is="feedsCard"/>
-        </view>
-        <view class='feeds'>
-          <template is="feedsCard"/>
-        </view>
-        <view class='feeds'>
-          <template is="feedsCard"/>
-        </view>
       </view>
       <view class='row'>
         <view class='feeds'>

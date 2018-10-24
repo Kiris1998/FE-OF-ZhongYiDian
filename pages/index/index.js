@@ -18,6 +18,34 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    // wx.request({
+    //   url: 'https://design.zhengsj.top/api/picture_manage/carousel_list',
+    //   method: "GET",
+    //   success: function (res) {
+    //     console.log(res)
+    //   }
+    // });
+    // wx.request({
+    //   url: 'https://design.zhengsj.top/api/find/square/0',
+    //   method: "GET",
+    //   success: function (res) {
+    //     console.log(res)
+    //   }
+    // });
+    // wx.request({
+    //   url: 'https://design.zhengsj.top/api/picture/tag_list',
+    //   method: "GET",
+    //   success: function (res) {
+    //     console.log(res)
+    //   }
+    // });
+    wx.request({
+      url: 'https://design.zhengsj.top/api/picture/category_list',
+      method: "GET",
+      success: function (res) {
+        console.log(res)
+      }
+    });
     wx.request({
       url: 'https://design.zhengsj.top/api/picture_manage/carousel_list',
       method: "GET",
@@ -26,8 +54,12 @@ Page({
       }
     });
     wx.request({
-      url: 'https://design.zhengsj.top/api/find/square/<0>',
-      method: "GET",
+      url: 'https://design.zhengsj.top/api/find/category_recommend',
+      method: "POST",
+      data:{
+        category_id:1,
+        page:1
+      },
       success: function (res) {
         console.log(res)
       }

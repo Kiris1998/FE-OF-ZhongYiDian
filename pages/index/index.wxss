@@ -7,29 +7,19 @@
  background: white;
  direction: column
 }
-.btns image{
-  width: 20px;
-  height: 20px;
-  margin: 3px 6px;
-}
 .feedsCard{
   box-shadow: none;
+  background: none;
   padding: 0px;
 }
-.btns{
-  margin-left: 10px;
-}
 .head{
-  width: 30px;
-  height: 30px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
   margin-left: -10px;
 }
 .textInfo text:nth-child(1){
-  font-size: 15px;
-}
-.textInfo text:nth-child(2){
-  font-size: 10px;
+  font-size: 13px;
 }
 swiper-item image{
   width: 100%;
@@ -59,15 +49,16 @@ swiper-item image{
   background:#F5F5F5;
   display: flex;
   justify-content: center;
+  height: calc(100vh - 370rpx)
 }
-.row{
+/* .row{
   padding: 1px;
-}
+} */
 .card-img{
-  width: 320rpx;
+  width: 355rpx;
 }
 .box{
   display: flex;
   justify-content: space-between;
-  width: 680rpx;
+  width: 770rpx;
 }

@@ -1,5 +1,5 @@
  <import src="../feeds/feeds.wxml"/>
   <view class='feeds'>
-      <template is="feedsCard" data="{{isLove}}"/>
+      <template is="feedsCard" data="{{...data}}"/>
   </view>
   <image class='add' src='../../img/ball.png' bindtap='addWork'></image>

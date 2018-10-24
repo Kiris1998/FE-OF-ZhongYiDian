@@ -17,12 +17,21 @@
   padding: 1px;
 }
 .card-img{
-  width: 320rpx;
+  width: 355rpx;
+}
+.head{
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+.textInfo text:nth-child(1){
+  font-size: 13px;
 }
 .box{
   display: flex;
   justify-content: space-between;
-  width: 680rpx;
+  width: 770rpx;
 }
 .btns image{
   width: 20px;
